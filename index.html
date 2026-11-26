@@ -19,7 +19,7 @@
 <style>
 /* VOICE: professional, clear, warm; first person, concrete facts.
    IDEA: an engineer's portfolio pressed like a vintage record: sleeve and spinning disc, tour-ticket timeline, postcard contact.
-   PICTURE: her portrait as a record sleeve with the disc sliding out and spinning; a live diagram of the five-agent pipeline.
+   PICTURE: her portrait as a record sleeve with the disc sliding out and spinning; a live diagram of the five-phase multi-agent pipeline.
    COLOUR and TYPE: powdered-rose paper, bordeaux ink, old-gold and bottle-green accents; Bodoni Moda titles, Plus Jakarta Sans text.
    LAYOUT: 1140px column, left-aligned; vintage objects carry personality, the reading parts stay calm. */
 :root{color-scheme:light dark;
@@ -89,7 +89,7 @@ nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 90%,
 .hero h1{font-family:var(--disp);font-size:clamp(52px,7.4vw,92px);font-weight:500;margin:18px 0 8px;letter-spacing:-.01em;line-height:1}
 .role{font-size:clamp(18px,2vw,22px);font-weight:600;color:#e9c3cb;margin:0 0 18px}
 .role span.rot{color:#fff;display:inline-block;border-bottom:2px solid #c46a7e;transition:opacity .35s,translate .35s}
-.role span.rot.out{opacity:0;translate:0 6px}
+.role span.rot.fading{opacity:0;translate:0 6px}
 .hero p.pitch{font-size:17px;color:#ecd3cf}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .social{display:flex;gap:10px;margin-top:22px}
@@ -485,7 +485,7 @@ footer{max-width:1140px;margin:0 auto;padding:28px max(5vw,18px);display:flex;fl
           <div class="job-h"><h3><span class="fr">Stagiaire IA &amp; Full-Stack : assistant product owner multi-agents</span><span class="en">AI &amp; Full-Stack Intern: multi-agent product owner assistant</span></h3><span class="when"><span class="fr">juin – août 2026</span><span class="en">Jun – Aug 2026</span></span></div>
           <p class="org">Tritux Group, Lac 2, Tunis</p>
           <ul>
-            <li><span class="fr">Conception d'un assistant IA pour product owner, avec cinq agents spécialisés orchestrés par LangGraph.</span><span class="en">Designed an AI assistant for product owners, with five specialised agents orchestrated by LangGraph.</span></li>
+            <li><span class="fr">Conception d'un assistant IA pour product owner : un système multi-agents en cinq phases, chacune orchestrée par son propre graphe LangGraph.</span><span class="en">Designed an AI assistant for product owners: a multi-agent system in five phases, each orchestrated by its own LangGraph graph.</span></li>
             <li><span class="fr">Mémoire RAG (ChromaDB, embeddings Hugging Face) et chat contextuel.</span><span class="en">RAG memory (ChromaDB, Hugging Face embeddings) and a context-aware chat.</span></li>
             <li><span class="fr">Analyse automatique des réunions : transcription Whisper et extraction des informations clés.</span><span class="en">Automated meeting analysis: Whisper transcription and key-information extraction.</span></li>
           </ul>
@@ -519,11 +519,11 @@ footer{max-width:1140px;margin:0 auto;padding:28px max(5vw,18px);display:flex;fl
     <div class="deck rv" id="demo">
       <div class="deck-h">
         <h3><span class="fr">Écoutez une réunion passer dans l'assistant</span><span class="en">Hear a meeting play through the assistant</span></h3>
-        <p><span class="fr">Chaque sillon du disque est un agent. Posez le diamant et suivez ce que chacun produit, à partir d'un exemple de réunion.</span><span class="en">Each groove on the record is an agent. Drop the needle and see what each one produces, from a sample meeting.</span></p>
+        <p><span class="fr">Chaque sillon du disque est une phase. Posez le diamant et suivez ce que chacun produit, à partir d'un exemple de réunion.</span><span class="en">Each groove on the record is a phase. Drop the needle and see what each one produces, from a sample meeting.</span></p>
       </div>
       <div class="deck-body">
         <div class="tt">
-          <svg viewBox="0 0 400 330" id="ttsvg" role="img" aria-label="Platine vinyle : chaque sillon correspond à un agent">
+          <svg viewBox="0 0 400 330" id="ttsvg" role="img" aria-label="Platine vinyle : chaque sillon correspond à une phase">
             <defs>
               <linearGradient id="plinth" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b2438"/><stop offset="1" stop-color="#47121f"/></linearGradient>
               <radialGradient id="rec" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#2a2224"/><stop offset="1" stop-color="#100c0d"/></radialGradient>
@@ -756,7 +756,7 @@ function setLang(l){
 document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.l)));
 
 /* rotating role */
-if(!reduce)setInterval(()=>{rot.classList.add('out');setTimeout(()=>{ri++;rot.textContent=roles[lang][ri%3];rot.classList.remove('out')},350)},2600);
+if(!reduce)setInterval(()=>{rot.classList.add('fading');setTimeout(()=>{ri++;rot.textContent=roles[lang][ri%3];rot.classList.remove('fading')},350)},2600);
 
 /* progress bar + active link */
 const bar=document.getElementById('progress');
