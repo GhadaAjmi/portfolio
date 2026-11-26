@@ -12,3 +12,8 @@ Site statique (HTML/CSS/JS, sans dépendance) : `index.html` + `assets/`.
 - Textes : chaque phrase existe en deux versions, `<span class="fr">` et `<span class="en">`.
 - Photo : intégrée directement dans index.html (data URI). CV : remplace `assets/CV_Ghada_Ajmi.pdf`.
 - Couleurs : variables en haut du `<style>` (`--brand`, `--rose`…).
+
+
+## Fichiers
+- `assets/CV_Ghada_Ajmi_FR.pdf` et `assets/CV_Ghada_Ajmi_EN.pdf` : CV liés au bouton « Mon CV » selon la langue.
+- `assets/og-image.jpg` : image d'aperçu affichée quand le lien est partagé sur LinkedIn.

@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ghada Ajmi, portfolio</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ghada Ajmi – Portfolio (Full-Stack & AI, PFE 2027)">
+<meta property="og:description" content="Élève ingénieure à l'ENICarthage : stages, projets, certifications et démo interactive d'un assistant IA multi-agents.">
+<meta property="og:image" content="https://portfolio-ghada-ajmi.vercel.app/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:url" content="https://portfolio-ghada-ajmi.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="description" content="Ghada Ajmi, élève ingénieure en informatique à l'ENICarthage. Développement full-stack et IA. Recherche un stage PFE 2027.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -163,6 +171,7 @@ nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 90%,
 .card[hidden]{display:none}
 .card .top{display:flex;justify-content:space-between;gap:10px;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:10px}
 .card .kind{color:var(--brand)}
+.card .wip{font-size:12px;font-weight:700;color:var(--green);background:color-mix(in srgb,var(--green) 14%,transparent);padding:2px 9px;border-radius:99px}
 .card p{font-size:15px;color:var(--muted);margin:8px 0 16px}
 .card .tags{margin-top:auto}
 .card a.gh{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:14px;font-weight:600;color:var(--brand);text-decoration:none}
@@ -377,7 +386,7 @@ footer{max-width:1140px;margin:0 auto;padding:28px max(5vw,18px);display:flex;fl
         <p class="pitch"><span class="fr">En 3<sup>e</sup> année à l'ENICarthage, je conçois des applications web et des systèmes d'IA : assistants multi-agents, RAG, plateformes métier. J'aborde chaque projet comme une création au service des personnes qui vont l'utiliser.</span><span class="en">Third-year student at ENICarthage, I design web applications and AI systems: multi-agent assistants, RAG, business platforms. I treat every project as something built for the people who will use it.</span></p>
         <div class="cta">
           <a class="btn primary" href="#projets"><span class="fr">Voir mes projets</span><span class="en">See my projects</span></a>
-          <a class="btn" href="assets/CV_Ghada_Ajmi.pdf" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-doc"/></svg><span class="fr">Mon CV</span><span class="en">My CV (French)</span></a>
+          <a class="btn fr" href="assets/CV_Ghada_Ajmi_FR.pdf" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-doc"/></svg>Mon CV</a><a class="btn en" href="assets/CV_Ghada_Ajmi_EN.pdf" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-doc"/></svg>My CV</a>
         </div>
         <div class="social">
           <a href="https://github.com/GhadaAjmi" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-gh"/></svg></a>
@@ -417,7 +426,7 @@ footer{max-width:1140px;margin:0 auto;padding:28px max(5vw,18px);display:flex;fl
   <div class="wrap">
     <div class="stats">
       <div class="stat"><b data-count="3">3</b><span class="fr">stages en entreprise</span><span class="en">industry internships</span></div>
-      <div class="stat"><b data-count="10">10</b><span class="fr">projets réalisés</span><span class="en">projects built</span></div>
+      <div class="stat"><b data-count="12">12</b><span class="fr">projets réalisés</span><span class="en">projects built</span></div>
       <div class="stat"><b data-count="5">5</b><span class="fr">langues parlées</span><span class="en">languages spoken</span></div>
     </div>
   </div>
@@ -570,15 +579,41 @@ footer{max-width:1140px;margin:0 auto;padding:28px max(5vw,18px);display:flex;fl
 <section class="band" id="projets">
   <div class="wrap">
     <h2 class="rv"><span class="fr">Projets</span><span class="en">Projects</span></h2>
-    <p class="intro"><span class="fr">Projets académiques et personnels. Le code source est disponible sur GitHub.</span><span class="en">Academic and personal projects. Source code is on GitHub.</span></p>
+    <p class="intro"><span class="fr">Projets académiques et personnels, terminés ou en cours. Le code des projets terminés est sur GitHub.</span><span class="en">Academic and personal projects, finished or in progress. Code for finished projects is on GitHub.</span></p>
     <div class="filters" role="group" aria-label="Filtrer">
       <button type="button" data-f="all" aria-pressed="true"><span class="fr">Tous</span><span class="en">All</span></button>
       <button type="button" data-f="ia" aria-pressed="false"><span class="fr">IA &amp; optimisation</span><span class="en">AI &amp; optimisation</span></button>
       <button type="button" data-f="web" aria-pressed="false">Full-stack</button>
       <button type="button" data-f="java" aria-pressed="false">Java</button>
+      <button type="button" data-f="devops" aria-pressed="false">DevOps</button>
+      <button type="button" data-f="data" aria-pressed="false">Data &amp; BI</button>
       <button type="button" data-f="c" aria-pressed="false">C / C++</button>
     </div>
     <div class="grid" id="grid">
+      <article class="card" data-k="web java">
+        <div class="top"><span class="kind">ENICarthage</span><span class="wip"><span class="fr">En cours</span><span class="en">In progress</span></span></div>
+        <h3><span class="fr">SmartHealthcare : plateforme de santé en microservices</span><span class="en">SmartHealthcare: microservice-based health platform</span></h3>
+        <p><span class="fr">Une plateforme e-santé découpée en microservices qui communiquent à travers quatre styles d'API : SOAP, REST, gRPC et GraphQL.</span><span class="en">An e-health platform split into microservices that communicate through four API styles: SOAP, REST, gRPC and GraphQL.</span></p>
+        <ul class="tags"><li>Microservices</li><li>SOAP</li><li>REST</li><li>gRPC</li><li>GraphQL</li></ul>
+      </article>
+      <article class="card" data-k="devops">
+        <div class="top"><span class="kind">ENICarthage</span><span class="wip"><span class="fr">En cours</span><span class="en">In progress</span></span></div>
+        <h3><span class="fr">Projet DevOps : une API de bout en bout</span><span class="en">DevOps project: an API end to end</span></h3>
+        <p><span class="fr">API back-end conteneurisée et déployée sur Kubernetes, avec un pipeline CI/CD GitHub Actions (build, tests, scans SAST et DAST), des métriques, des logs structurés et du traçage.</span><span class="en">A containerised back-end API deployed on Kubernetes, with a GitHub Actions CI/CD pipeline (build, tests, SAST and DAST scans), metrics, structured logs and tracing.</span></p>
+        <ul class="tags"><li>Docker</li><li>Kubernetes</li><li>GitHub Actions</li><li>CI/CD</li><li>SAST/DAST</li><li><span class="fr">Observabilité</span><span class="en">Observability</span></li></ul>
+      </article>
+      <article class="card" data-k="data">
+        <div class="top"><span class="kind">ENICarthage</span><span class="wip"><span class="fr">En cours</span><span class="en">In progress</span></span></div>
+        <h3><span class="fr">Tableaux de bord Power BI</span><span class="en">Power BI dashboards</span></h3>
+        <p><span class="fr">Conception de tableaux de bord interactifs pour suivre des indicateurs et aider à la décision.</span><span class="en">Interactive dashboards to track indicators and support decision-making.</span></p>
+        <ul class="tags"><li>Power BI</li><li><span class="fr">Visualisation</span><span class="en">Data visualisation</span></li></ul>
+      </article>
+      <article class="card" data-k="java">
+        <div class="top"><span class="kind">ENICarthage</span><span class="wip"><span class="fr">En cours</span><span class="en">In progress</span></span></div>
+        <h3><span class="fr">Jeu du pendu (Hangman)</span><span class="en">Hangman game</span></h3>
+        <p><span class="fr">Le jeu du pendu en application de bureau, avec une interface graphique JavaFX.</span><span class="en">The classic word-guessing game as a desktop app with a JavaFX interface.</span></p>
+        <ul class="tags"><li>Java</li><li>JavaFX</li></ul>
+      </article>
       <article class="card" data-k="ia web java">
         <div class="top"><span class="kind">ENICarthage</span><span>Angular, Spring Boot</span></div>
         <h3><span class="fr">Plateforme de gestion des stages et des soutenances</span><span class="en">Internship and thesis-defence platform</span></h3>
@@ -664,8 +699,8 @@ footer{max-width:1140px;margin:0 auto;padding:28px max(5vw,18px);display:flex;fl
     <h2 class="rv"><span class="fr">Mes instruments</span><span class="en">My instruments</span></h2>
     <p class="intro"><span class="fr">Choisissez une famille pour voir les technologies que je pratique.</span><span class="en">Pick a family to see the technologies I work with.</span> <span class="legend"><i></i><span class="fr">utilisé en entreprise</span><span class="en">used in industry</span></span></p>
     <div class="rack">
-      <div class="tabs" role="tablist" aria-label="Familles de compétences"><button type="button" role="tab" id="tab-ia" aria-controls="pan-ia" aria-selected="true" tabindex="0"><span class="fr">IA et données</span><span class="en">AI and data</span><small>12</small></button><button type="button" role="tab" id="tab-web" aria-controls="pan-web" aria-selected="false" tabindex="-1"><span class="fr">Développement web</span><span class="en">Web development</span><small>6</small></button><button type="button" role="tab" id="tab-lang" aria-controls="pan-lang" aria-selected="false" tabindex="-1"><span class="fr">Langages</span><span class="en">Languages</span><small>7</small></button><button type="button" role="tab" id="tab-db" aria-controls="pan-db" aria-selected="false" tabindex="-1"><span class="fr">Bases de données</span><span class="en">Databases</span><small>5</small></button><button type="button" role="tab" id="tab-tools" aria-controls="pan-tools" aria-selected="false" tabindex="-1"><span class="fr">Outils et méthodes</span><span class="en">Tools and methods</span><small>11</small></button></div>
-      <div class="panels"><div class="pan" role="tabpanel" id="pan-ia" aria-labelledby="tab-ia"><p class="pdesc"><span class="fr">Assistants multi-agents, RAG et transcription : déjà mis en œuvre en entreprise.</span><span class="en">Multi-agent assistants, RAG and transcription, already used in industry.</span></p><ul class="chips"><li class="used">LangGraph</li><li class="used">LangChain</li><li class="used">RAG</li><li class="used">Llama 3</li><li class="used">Ollama</li><li class="used">Hugging Face</li><li class="used">Whisper</li><li><span class="fr">LLM</span><span class="en">LLMs</span></li><li><span class="fr">IA générative</span><span class="en">Generative AI</span></li><li><span class="fr">Systèmes multi-agents</span><span class="en">Multi-agent systems</span></li><li>Machine Learning</li><li>Google OR-Tools</li></ul></div><div class="pan" role="tabpanel" id="pan-web" aria-labelledby="tab-web" hidden><p class="pdesc"><span class="fr">Front-end Angular et API REST en Django ou Spring Boot, du formulaire jusqu'à la base.</span><span class="en">Angular front ends and REST APIs in Django or Spring Boot, from form to database.</span></p><ul class="chips"><li class="used">Angular</li><li class="used">Django REST</li><li class="used">Spring Boot</li><li>Node.js</li><li>Bootstrap</li><li class="used">Microservices</li></ul></div><div class="pan" role="tabpanel" id="pan-lang" aria-labelledby="tab-lang" hidden><p class="pdesc"><span class="fr">Python et Java au quotidien, TypeScript côté interface, C et C++ pour les fondamentaux.</span><span class="en">Python and Java daily, TypeScript for interfaces, C and C++ for the fundamentals.</span></p><ul class="chips"><li class="used">Python</li><li class="used">Java</li><li class="used">TypeScript</li><li>JavaScript</li><li>C</li><li>C++</li><li>PHP</li></ul></div><div class="pan" role="tabpanel" id="pan-db" aria-labelledby="tab-db" hidden><p class="pdesc"><span class="fr">Relationnel, NoSQL et base vectorielle pour la mémoire des agents.</span><span class="en">Relational, NoSQL and a vector store for agent memory.</span></p><ul class="chips"><li class="used">PostgreSQL</li><li class="used">MySQL</li><li class="used">ChromaDB</li><li>MongoDB</li><li>Oracle</li></ul></div><div class="pan" role="tabpanel" id="pan-tools" aria-labelledby="tab-tools" hidden><p class="pdesc"><span class="fr">Sécurité des accès, conteneurs, tâches asynchrones et travail en équipe agile.</span><span class="en">Access security, containers, async jobs and agile teamwork.</span></p><ul class="chips"><li class="used">Keycloak</li><li class="used">Docker</li><li class="used">Celery</li><li class="used">Redis</li><li class="used">Scrum</li><li>Git</li><li>Postman</li><li>Jira</li><li>Trello</li><li>Figma</li><li>Odoo</li></ul></div></div>
+      <div class="tabs" role="tablist" aria-label="Familles de compétences"><button type="button" role="tab" id="tab-ia" aria-controls="pan-ia" aria-selected="true" tabindex="0"><span class="fr">IA et données</span><span class="en">AI and data</span><small>12</small></button><button type="button" role="tab" id="tab-web" aria-controls="pan-web" aria-selected="false" tabindex="-1"><span class="fr">Développement web</span><span class="en">Web development</span><small>10</small></button><button type="button" role="tab" id="tab-lang" aria-controls="pan-lang" aria-selected="false" tabindex="-1"><span class="fr">Langages</span><span class="en">Languages</span><small>7</small></button><button type="button" role="tab" id="tab-db" aria-controls="pan-db" aria-selected="false" tabindex="-1"><span class="fr">Bases de données</span><span class="en">Databases</span><small>5</small></button><button type="button" role="tab" id="tab-devops" aria-controls="pan-devops" aria-selected="false" tabindex="-1"><span class="fr">DevOps et cloud</span><span class="en">DevOps and cloud</span><small>8</small></button><button type="button" role="tab" id="tab-tools" aria-controls="pan-tools" aria-selected="false" tabindex="-1"><span class="fr">Outils et méthodes</span><span class="en">Tools and methods</span><small>11</small></button></div>
+      <div class="panels"><div class="pan" role="tabpanel" id="pan-ia" aria-labelledby="tab-ia"><p class="pdesc"><span class="fr">Assistants multi-agents, RAG et transcription : déjà mis en œuvre en entreprise.</span><span class="en">Multi-agent assistants, RAG and transcription, already used in industry.</span></p><ul class="chips"><li class="used">LangGraph</li><li class="used">LangChain</li><li class="used">RAG</li><li class="used">Llama 3</li><li class="used">Ollama</li><li class="used">Hugging Face</li><li class="used">Whisper</li><li><span class="fr">LLM</span><span class="en">LLMs</span></li><li><span class="fr">IA générative</span><span class="en">Generative AI</span></li><li><span class="fr">Systèmes multi-agents</span><span class="en">Multi-agent systems</span></li><li>Machine Learning</li><li>Google OR-Tools</li></ul></div><div class="pan" role="tabpanel" id="pan-web" aria-labelledby="tab-web" hidden><p class="pdesc"><span class="fr">Front-end Angular et API REST en Django ou Spring Boot, du formulaire jusqu'à la base.</span><span class="en">Angular front ends and REST APIs in Django or Spring Boot, from form to database.</span></p><ul class="chips"><li class="used">Angular</li><li class="used">Django REST</li><li class="used">Spring Boot</li><li>Node.js</li><li>Bootstrap</li><li class="used">Microservices</li><li>GraphQL</li><li>gRPC</li><li>SOAP</li><li>JavaFX</li></ul></div><div class="pan" role="tabpanel" id="pan-lang" aria-labelledby="tab-lang" hidden><p class="pdesc"><span class="fr">Python et Java au quotidien, TypeScript côté interface, C et C++ pour les fondamentaux.</span><span class="en">Python and Java daily, TypeScript for interfaces, C and C++ for the fundamentals.</span></p><ul class="chips"><li class="used">Python</li><li class="used">Java</li><li class="used">TypeScript</li><li>JavaScript</li><li>C</li><li>C++</li><li>PHP</li></ul></div><div class="pan" role="tabpanel" id="pan-db" aria-labelledby="tab-db" hidden><p class="pdesc"><span class="fr">Relationnel, NoSQL et base vectorielle pour la mémoire des agents.</span><span class="en">Relational, NoSQL and a vector store for agent memory.</span></p><ul class="chips"><li class="used">PostgreSQL</li><li class="used">MySQL</li><li class="used">ChromaDB</li><li>MongoDB</li><li>Oracle</li></ul></div><div class="pan" role="tabpanel" id="pan-devops" aria-labelledby="tab-devops" hidden><p class="pdesc"><span class="fr">De l'intégration continue au déploiement sur Kubernetes, avec la sécurité et l'observabilité intégrées au pipeline.</span><span class="en">From continuous integration to Kubernetes deployment, with security and observability built into the pipeline.</span></p><ul class="chips"><li class="used">Docker</li><li>Kubernetes</li><li>GitHub Actions</li><li>CI/CD</li><li>SAST / DAST</li><li><span class="fr">Observabilité</span><span class="en">Observability</span></li><li class="used">Microservices</li><li>AWS</li></ul></div><div class="pan" role="tabpanel" id="pan-tools" aria-labelledby="tab-tools" hidden><p class="pdesc"><span class="fr">Sécurité des accès, conteneurs, tâches asynchrones et travail en équipe agile.</span><span class="en">Access security, containers, async jobs and agile teamwork.</span></p><ul class="chips"><li class="used">Keycloak</li><li class="used">Celery</li><li class="used">Redis</li><li class="used">Scrum</li><li>Git</li><li>Postman</li><li>Jira</li><li>Trello</li><li>Figma</li><li>Odoo</li><li>Power BI</li></ul></div></div>
     </div>
 
     <h2 class="rv" style="margin-top:clamp(56px,7vw,88px)"><span class="fr">Ce qui m'accorde</span><span class="en">What keeps me in tune</span></h2>
